@@ -7,7 +7,7 @@
 #calculator {
 	background-color: #999;
 	width: 310px;
-	height: 460px;
+	height: 480px;
 	border: 3px black solid;
 	margin: 10px auto;
 	padding: 5px;
@@ -18,7 +18,7 @@
 }
 
 #total {
-    height: 70px;
+    height: 60px;
     width: 300px;
     margin:auto;
     background-color:white;
@@ -27,7 +27,16 @@
     font-size: 60px;
     padding: 0px 5px;
 }
-
+#running {
+    height: 20px;
+    width: 300px;
+    margin:auto;
+    background-color:white;
+    margin-bottom: 5px;
+    text-align: right;
+    font-size: 10px;
+    padding: 0px 5px;
+}
 #numbers, #operators {
 	margin: auto;	
 }
