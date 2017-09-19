@@ -12,10 +12,12 @@ $(document).ready(function(){
     var newnumber = "";
     var operator = "";
     var totaldiv = $("#total");
+    var runningdiv = $("#running");
     totaldiv.text("0");
     $("#numbers > a").not("#clear,#clearall").click(function(){
 		number += $(this).text();
 		totaldiv.text(number);
+        runningdiv.append(number);
 		testNumLength(number);
     });
     $("#operators > a").not("#equals").click(function(){
@@ -23,12 +25,15 @@ $(document).ready(function(){
 		newnumber = number;
 		number = "";
 		totaldiv.text("0");
+        runningdiv.append($(this).text()); 
     });
     $("#clear,#clearall").click(function(){
 		number = "";
+        runningdiv.text("");
 		totaldiv.text("0");
 		if ($(this).attr("id") === "clearall") {
 			newnumber = "";
+            runningdiv.text("");
 		}
     });
     //Add your last .click() here!
@@ -43,7 +48,7 @@ $(document).ready(function(){
     		number = (parseInt(newnumber, 10) * parseInt(number,10)).toString(10);
     	}
     	totaldiv.text(number);
-    	testNumLength(number);
+//    	testNumLength(number);
     	number = "";
     	newnumber = "";
     });
